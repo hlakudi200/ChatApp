@@ -37,6 +37,20 @@
         form input[type=text]:hover{
             border: 2px solid #DB4A2B;
         }
+        #sign-up-link{
+           color: #61A5BD;
+           text-decoration: none;
+        }
+        #sign-up-link:hover{
+            color: #DB4A2B;
+        }
+        .sing-in-text{
+            color: #766E6E;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 64px;
+            margin-top: -52px;
+        }
     </style>
 </head>
 
@@ -51,16 +65,18 @@
         <div class="leftcontainer">
             <div class="logo">
 
-                <img src="../assest/images/NobgLogo.png" alt="">
+                <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="100%">
             </div>
             <div class="sing-in-text">
-                
+                Sing In
             </div>
             <form action="" method="post"
                 style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
                 <input type="text" placeholder="Email/Username" class="form-text-input" name="username-email">
+                <i class="fas fa-user ms-3"></i>
                 <input type="text" placeholder="Password" class="form-text-input">
                 <button class="primarybtn" style="margin-right: 0;">Sing In</button>
+                <a href="" id="sign-up-link">Don't have an account? sing up.</a>
             </form>
 
 
