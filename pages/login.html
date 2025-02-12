@@ -1,15 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sing In</title>
     <link rel="stylesheet" href="../styles/global.css">
+    <style>
+        #outer-cont {
+            margin-top: 120px;
+        }
+
+        form {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        form input[type=text]{
+            width: 60%;
+            height: 40px;
+            border: none;
+            color: black;
+            background-color: #D9D9D9;
+            align-self: center;
+            border-radius: 10px;
+            margin: 10px;
+            padding-left:20px ;
+            
+        }
+    
+        form input[type=text]:focus{
+            border:2px solid #DB4A2B ;
+        }
+        form input[type=text]:hover{
+            border: 2px solid #DB4A2B;
+        }
+    </style>
 </head>
+
 <body>
-     <main>
-        <div id="rightcontainer"></div>
-        <div id="leftcontainer"></div>
-     </main>
+    <main class="outercontainer" id="outer-cont">
+        <!--is actully on the left-->
+        <div class="rightcontainer">
+            <img src="../assest/images/signImg.jpg" id="rightphoto" alt="" height="500px" width="100%"
+                style="border-radius:56px ;object-fit:cover;" />
+        </div>
+        <!--is actully on the right-->
+        <div class="leftcontainer">
+            <div class="logo">
+
+                <img src="../assest/images/NobgLogo.png" alt="">
+            </div>
+            <div class="sing-in-text">
+                
+            </div>
+            <form action="" method="post"
+                style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
+                <input type="text" placeholder="Email/Username" class="form-text-input" name="username-email">
+                <input type="text" placeholder="Password" class="form-text-input">
+                <button class="primarybtn" style="margin-right: 0;">Sing In</button>
+            </form>
+
+
+        </div>
+
+    </main>
 </body>
+
 </html>
