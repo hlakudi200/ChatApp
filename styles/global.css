@@ -1,0 +1,111 @@
+.outercontainer{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.buttongroup{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+.primarybtn{
+    background-color: #DB4A2B;
+    color: white;
+    width: 157px;
+    height:47px ;
+    border-radius: 16px ;
+    border-color:#DB4A2B;
+    border-width: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 60px;
+}
+.secondarybtn{
+   background-color: white;
+   color:#7C7070 ;
+   border-radius:16px ;
+   width: 157px;
+   height: 47px;
+   border-color: #DB4A2B;
+   border-width: 3px;
+   margin-right: 60px;
+}
+#subheading{
+  font-weight:normal;
+  font-size: 38px;
+  color:#DB4A2B;
+  font-style: italic;
+  align-self: center;
+  margin-top: -100px;
+  margin-bottom: 112px;
+  z-index: 1;
+}
+.leftcontainer{
+     width: 50%;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+}
+.rightcontainer{
+    width: 50%;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+    .outercontainer{
+        margin-top: 10px;
+        margin-left: 0px;
+        margin-right: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    .rightcontainer{
+        display: none;
+    }
+    .leftcontainer{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .secondarybtn{
+        margin-right: 0;
+    }
+    .primarybtn{
+        margin-right: 0;
+    }
+    .buttongroup{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #subheading{
+        font-weight:normal;
+        font-size: 27px;
+        color:#DB4A2B;
+        font-style: italic;
+        align-self: center;
+        margin-top: -150px;
+        margin-bottom: 112px;
+        z-index: 1;
+    }
+    button{
+        margin-left: 0;
+        margin-right: 0;
+    }
+ }
+
+
