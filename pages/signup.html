@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sing Up</title>
+    <link rel="stylesheet" href="../styles/global.css">
+    <style>
+        #outer-cont {
+            margin-top: 120px;
+        }
+
+        form {
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        form input[type=text],input[type=password]{
+            width: 60%;
+            height: 40px;
+            border: none;
+            color: black;
+            background-color: #D9D9D9;
+            align-self: center;
+            border-radius: 10px;
+            margin: 10px;
+            padding-left:20px ;
+            
+        }
+
+        form select{
+            width: 63%;
+            height: 42px;
+            border: none;
+            color: black;
+            background-color: #D9D9D9;
+            align-self: center;
+            border-radius: 10px;
+            margin: 10px;
+            padding-left:20px ;
+        }
+      
+        form input[type=text]:focus{
+            border:2px solid #DB4A2B ;
+        }
+        form input[type=text]:hover{
+            border: 2px solid #DB4A2B;
+        }
+        #sign-up-link{
+           color: #61A5BD;
+           text-decoration: none;
+        }
+        #sign-up-link:hover{
+            color: #DB4A2B;
+        }
+        .sing-in-text{
+            color: #766E6E;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 64px;
+            margin-top: -52px;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 1024px) {
+            .sing-in-text{
+                margin-top: 0px;
+                font-size: 30px;
+            }
+            #logo{
+                margin-top: -30px;
+
+            }
+            form select{
+                width: 66%;
+                height: 42px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="outercontainer" id="outer-cont">
+        <!--is actully on the left-->
+        <div class="rightcontainer">
+            <img src="../assest/images/signImg.jpg" id="rightphoto" alt="" height="500px" width="100%"
+                style="border-radius:56px ;object-fit:cover;" />
+        </div>
+        <!--is actully on the right-->
+        <div class="leftcontainer">
+            
+            <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="50%" id="logo" >
+            
+            <div class="sing-in-text">
+                Sign Up
+            </div>
+            <form action="" method="post"
+                style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
+                <input type="text" placeholder="Username" class="form-text-input" name="username-email">
+                <input type="text" placeholder="Email address" class="form-text-input" name="email-address">
+                <select type="text" placeholder="----select role---" class="form-text-input" name="username-email">
+                <option value="role">----Select role----</option> 
+                <option value="sofware-dev">Software Developer</option>
+                 <option value="business-anlyst">Business Analyst</option>
+                </select>
+                <input type="text" placeholder="Password" class="form-text-input" type="password">
+                <input type="text" placeholder="confirm password" class="form-text-input" type="password">
+                <button class="primarybtn" style="margin-right: 0;">Sign Up</button>
+                <a href="" id="sign-up-link"> Have an account? sign in.</a>
+            </form>
+        
+
+        </div>
+
+    </main>
+</body>
+
+</html>
