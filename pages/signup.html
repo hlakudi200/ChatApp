@@ -18,31 +18,81 @@
         </div>
         <!--is actully on the right-->
         <div class="leftcontainer">
-            
-            <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="50%" id="logo" >
-            
+
+            <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="50%" id="logo">
+
             <div class="sing-in-text">
                 Sign Up
             </div>
-            <form action="" method="post"
-                style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
-                <input type="text" placeholder="Username" class="form-text-input" name="username-email">
-                <input type="text" placeholder="Email address" class="form-text-input" name="email-address">
-                <select type="text" placeholder="----select role---" class="form-text-input" name="username-email">
-                <option value="role">----Select role----</option> 
-                <option value="sofware-dev">Software Developer</option>
-                 <option value="business-anlyst">Business Analyst</option>
+            <form  id='signupForm' style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
+                <input type="text" id='username' placeholder="Username" class="form-text-input" name="username-email">
+                <input type="text" id='email' placeholder="Email address" class="form-text-input" name="email-address">
+                <select type="text" id="role" placeholder="----select role---" class="form-text-input" name="user-role">
+                    <option value="role">----Select role----</option>
+                    <option value="sofware-dev">Software Developer</option>
+                    <option value="business-anlyst">Business Analyst</option>
                 </select>
-                <input type="text" placeholder="Password" class="form-text-input" type="password">
-                <input type="text" placeholder="confirm password" class="form-text-input" type="password">
-                <button class="primarybtn" style="margin-right: 0;">Sign Up</button>
-                <a href="" id="sign-up-link"> Have an account? sign in.</a>
+                <input type="text" id='password' placeholder="Password" class="form-text-input" type="password">
+                <input type="text" id="confirmPass" placeholder="confirm password" class="form-text-input"
+                    type="password">
+                <button class="primarybtn" style="margin-right: 0;" id="sign-up-btn" type="submit">Sign Up</button>
+                <a href="login.html" id="sign-up-link"> Have an account? sign in.</a>
             </form>
-        
+
 
         </div>
 
     </main>
+    <script src="../js/main.js"></script>
+    <script>
+
+
+
+        let users = [];
+
+        document.getElementById('signupForm').addEventListener('submit',function (e){
+            e.preventDefault();
+            let username = document.getElementById('username').value;
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let confirmPass = document.getElementById('confirmPass').value;
+            let role = document.getElementById("role");
+            let option = role.options[role.selectedIndex]
+
+            //check if the user exist 
+            const userExist=users.some(user=>user.username===username||user.email===email)
+    
+            if(userExist){
+                alert("user already exists");
+                return;
+            }
+             
+            console.log(typeof(password))
+            console.log(typeof(password))
+            if(password.trim()!==confirmPass.trim()){
+                alert("password do not match")
+                return
+            }
+            console.log("we got here")
+            const newUser={
+                username,
+                email,
+                password,
+                role,
+            };
+            
+
+            users.push(newUser);
+            localStorage.setItem('user',JSON.stringify(users))
+            alert('sign up new succesful')
+            window.location.href = "chatdashboard";
+            console.log(users)
+
+        });
+
+
+
+    </script>
 </body>
 
 </html>
