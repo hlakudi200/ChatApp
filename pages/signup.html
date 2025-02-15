@@ -7,6 +7,8 @@
     <title>Sing Up</title>
     <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="../styles/pages/signup.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
 </head>
 
 <body>
@@ -18,31 +20,34 @@
         </div>
         <!--is actully on the right-->
         <div class="leftcontainer">
-            
-            <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="50%" id="logo" >
-            
+
+            <img src="../assest/images/NobgLogo.png" alt="bontle-logo" width="50%" id="logo">
+
             <div class="sing-in-text">
                 Sign Up
             </div>
-            <form action="" method="post"
-                style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
-                <input type="text" placeholder="Username" class="form-text-input" name="username-email">
-                <input type="text" placeholder="Email address" class="form-text-input" name="email-address">
-                <select type="text" placeholder="----select role---" class="form-text-input" name="username-email">
-                <option value="role">----Select role----</option> 
-                <option value="sofware-dev">Software Developer</option>
-                 <option value="business-anlyst">Business Analyst</option>
+            <form  id='signupForm' style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
+                <input type="text" id='username' placeholder="Username" class="form-text-input" name="username-email" required>
+                <input type="text" id='email' placeholder="Email address" class="form-text-input" name="email-address" pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}' title="Plaease enter a valid email address" required>
+                <select type="text" id="role" placeholder="----select role---" class="form-text-input" name="user-role">
+                    <option value="role">----Select role----</option>
+                    <option value="sofware-dev">Software Developer</option>
+                    <option value="business-anlyst">Business Analyst</option>
                 </select>
-                <input type="text" placeholder="Password" class="form-text-input" type="password">
-                <input type="text" placeholder="confirm password" class="form-text-input" type="password">
-                <button class="primarybtn" style="margin-right: 0;">Sign Up</button>
-                <a href="" id="sign-up-link"> Have an account? sign in.</a>
+                <input type="password" id='password' placeholder="Password" class="form-text-input" type="password">
+                <input type="password" id="confirmPass" placeholder="confirm password" class="form-text-input"
+                    type="password">
+                <button class="primarybtn" style="margin-right: 0;" id="sign-up-btn" type="submit">Sign Up</button>
+                <a href="login.html" id="sign-up-link"> Have an account? sign in.</a>
             </form>
-        
+
 
         </div>
 
     </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/authetication.js"></script>
+    
 </body>
 
 </html>
