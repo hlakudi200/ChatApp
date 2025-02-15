@@ -70,11 +70,11 @@
             <div class="sing-in-text">
                 Sing In
             </div>
-            <form action="" method="post"
+            <form  id="signin-form"
                 style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
-                <input type="text" placeholder="Email/Username" class="form-text-input" name="username-email">
+                <input type="text" placeholder="username" id='username'class="form-text-input" name="username-email" pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}' required>
                 <i class="fas fa-user ms-3"></i>
-                <input type="text" placeholder="Password" class="form-text-input">
+                <input type="password" placeholder="Password" id='password'class="form-text-input" required>
                 <button class="primarybtn" style="margin-right: 0;">Sing In</button>
                 <a href="" id="sign-up-link">Don't have an account? sing up.</a>
             </form>
@@ -83,6 +83,11 @@
         </div>
 
     </main>
+
+    <script>
+        
+
+    </script>
 </body>
 
 </html>
