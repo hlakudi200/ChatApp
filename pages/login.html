@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sing In</title>
     <link rel="stylesheet" href="../styles/global.css">
+
     <style>
         #outer-cont {
             margin-top: 120px;
@@ -18,7 +19,8 @@
             display: flex;
             flex-direction: column;
         }
-        form input[type=text]{
+
+        form input[type=text] {
             width: 60%;
             height: 40px;
             border: none;
@@ -27,24 +29,28 @@
             align-self: center;
             border-radius: 10px;
             margin: 10px;
-            padding-left:20px ;
-            
+            padding-left: 20px;
+
         }
-    
-        form input[type=text]:focus{
-            border:2px solid #DB4A2B ;
-        }
-        form input[type=text]:hover{
+
+        form input[type=text]:focus {
             border: 2px solid #DB4A2B;
         }
-        #sign-up-link{
-           color: #61A5BD;
-           text-decoration: none;
+
+        form input[type=text]:hover {
+            border: 2px solid #DB4A2B;
         }
-        #sign-up-link:hover{
+
+        #sign-up-link {
+            color: #61A5BD;
+            text-decoration: none;
+        }
+
+        #sign-up-link:hover {
             color: #DB4A2B;
         }
-        .sing-in-text{
+
+        .sing-in-text {
             color: #766E6E;
             font-style: normal;
             font-weight: 300;
@@ -70,24 +76,22 @@
             <div class="sing-in-text">
                 Sing In
             </div>
-            <form  id="signin-form"
+            <form id="signinForm"
                 style="width: 100%;justify-content: center;align-items: center;display: flex;flex-direction: column;">
-                <input type="text" placeholder="username" id='username'class="form-text-input" name="username-email" pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}' required>
+                <input type="text" placeholder="username" id='username' class="form-text-input" name="username"
+                    required>
                 <i class="fas fa-user ms-3"></i>
-                <input type="password" placeholder="Password" id='password'class="form-text-input" required>
+                <input type="password" placeholder="Password" id='password' class="form-text-input" required>
                 <button class="primarybtn" style="margin-right: 0;">Sing In</button>
-                <a href="" id="sign-up-link">Don't have an account? sing up.</a>
+                <a href="signup.html" id="sign-up-link">Don't have an account? sing up.</a>
             </form>
 
 
         </div>
 
     </main>
-
-    <script>
-        
-
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script src="../js/login.js"></script>
 </body>
 
 </html>
