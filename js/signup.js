@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email,
         password: hashedPassword,
         role: option,
-        userImg: "https://example.com/profile-image.png", 
+        userImg,
       };
   
       users.push(newUser);
