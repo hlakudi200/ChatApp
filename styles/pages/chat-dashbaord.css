@@ -8,20 +8,26 @@
     flex-direction: column;
     /* padding-left: 20px; */
     margin-left: 30px;
-
+    height: 100%;
+    min-height: 957px;
+    max-height: fit-content;
 }
 
 .left-container {
+
     width: 68%;
     background-color: #D9D9D9;
     border-radius: 18px;
     margin-left: 25px;
     margin-right: 25px;
-    height: 600px;
+    height: fit-content;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
+    min-height: 957px;
+    max-height: fit-content;
 }
 
 .secondarybtn {
@@ -45,6 +51,7 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    height: 100%;
 }
 
 .user {
@@ -86,7 +93,13 @@
     margin-right: 10px;
 
 }
-
+.sig-out-btn{
+    width: 50%;
+    justify-content: end;
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+} 
 .sent {
     background-color: white;
     border-radius: 18px;
@@ -110,6 +123,7 @@
     border-style: solid;
     align-self: flex-end;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .received,
@@ -128,7 +142,10 @@
     bottom: 43px;
     right: 44px;
 }
-
+.user-name{
+    margin-bottom:-2px;
+     margin-left: 100px;
+}
 .chatbox #chat-input {
     width: 95%;
     border-radius: 10px;
@@ -136,15 +153,28 @@
     border-width: 2px;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 1024px) {
+.active-user{
+    width: 50%; 
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+  }  
 
-    /* .left-container{
+@media only screen and (min-width: 320px) and (max-width: 1024px) {
+   
+    .user-name{
+        margin-bottom: -2px;
+        margin-left: 51px;
+    }
+    .left-container{
         width: 100%; 
         background-color: #D9D9D9; 
         border-radius: 18px;
         margin-left: 5px;
         margin-right: 5px;
-        height: 600px;
+        height: 560px;
+        min-height:600px ;
+        max-height: fit-content;
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -209,7 +239,7 @@
    border-radius: 10px;
    border-color: #DB4A2B;
    border-width: 2px;
-} */
+}
     .right-container {
         width: 100%;
         background-color: #D9D9D9;
@@ -228,14 +258,50 @@
         display: none;
     }
 
+    #signout-btn{
+        width: 46px;
+        height: 17px;
+        font-size: xx-small;
+    }
+    .sig-out-btn {
+        width: 50%;
+        justify-content: start;
+        align-items: end;
+        display: flex
+    ;
+        flex-direction: column;
+    }
     .secondarybtn {
         width: 100px;
         height: 30px;
     }
-
-    .primarybtn {
+    
+    .primarybtn  {
         width: 100px;
         height: 30px;
     }
+    #name {
+        color: #7C7070;
+        font-weight: bolder;
+        font-size: medium;
+        font-family: system-ui;
+    }
+    .active-user {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    #back-button{
+        width: 46px;
+        height: 17px;
+        font-size: xx-small;
+        margin-left: 10px;
+    }
+
+    #details {
+        width: 70%;
+        margin-left: 20px;
+    }
 }

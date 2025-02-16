@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    
     function hashPassword(password) {
       return CryptoJS.SHA256(password).toString();
     }
@@ -37,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
         email,
         password: hashedPassword,
         role: option,
-        userImg: "https://example.com/profile-image.png", 
+        userImg:"../assest/images/dafualtimg.jpg",
       };
   
       users.push(newUser);
