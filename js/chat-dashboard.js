@@ -1,6 +1,8 @@
 let users = JSON.parse(localStorage.getItem('users')) || [];
 let messages = JSON.parse(localStorage.getItem('messages')) || [];
-let activeUser = null;
+let activeRole = null;
+let activeUSerName=null;
+let activeImage=null;
 let currentUser = localStorage.getItem('currentUser');
 
 if (!currentUser) {
@@ -8,12 +10,10 @@ if (!currentUser) {
     window.location.href = "login.html";
 }
 
-// Function to display users, including Group Chat
+
 function displayUsers() {
     const userContainer = document.getElementById('user-container');
     userContainer.innerHTML = '';
-
-    // Add "Group Chat" as a special user
     const groupChatDiv = document.createElement('div');
     groupChatDiv.classList.add('user');
     groupChatDiv.style.cursor = 'pointer';
@@ -21,7 +21,7 @@ function displayUsers() {
     const imgDiv = document.createElement('div');
     imgDiv.style.width = '30%';
     const img = document.createElement('img');
-    img.src = '../assest/images/groupchat.jpg'; // Group Chat Icon
+    img.src = '../assest/images/groupchat.jpg'; 
     img.alt = 'group-chat';
     img.height = '80';
     img.width = '80';
@@ -30,23 +30,20 @@ function displayUsers() {
 
     const detailsDiv = document.createElement('div');
     detailsDiv.id = 'details';
-
-    const name = document.createElement('h2');
-    name.style.color = '#7C7070'; // Restoring original text color
+    const name = document.createElement('h3');
+    name.style.color = '#7C7070'; 
     name.textContent = "Group Chat";
     detailsDiv.appendChild(name);
-
     const hr = document.createElement('hr');
     hr.style.borderTop = '2px solid white';
     hr.style.width = '90%';
-
     groupChatDiv.appendChild(imgDiv);
     groupChatDiv.appendChild(detailsDiv);
     userContainer.appendChild(groupChatDiv);
     userContainer.appendChild(hr);
 
     groupChatDiv.addEventListener('click', function () {
-        loadChat("Group Chat");
+        loadChat("Group Chat","GroupChat","../assest/images/groupchat.jpg");
     });
 
     users.forEach(user => {
@@ -68,12 +65,11 @@ function displayUsers() {
 
         const detailsDiv = document.createElement('div');
         detailsDiv.id = 'details';
-
-        const name = document.createElement('h2');
+        
+        const name = document.createElement('h3');
         name.style.color = '#7C7070'; 
         name.textContent = user.username;
         detailsDiv.appendChild(name);
-
         const role = document.createElement('p');
         role.style.color = '#DB4A2B'; 
         role.textContent = user.role;
@@ -89,19 +85,48 @@ function displayUsers() {
         userContainer.appendChild(hr);
 
         userDiv.addEventListener('click', function () {
-            loadChat(user.username);
+            loadChat(user.username,user.role,user.userImg);
         });
     });
 }
 
-function loadChat(selectedUser) {
+
+function isMobile() {
+    return window.innerWidth <= 767;
+}
+
+if (isMobile()) {
+    console.log("This is a mobile device.");
+} else {
+    console.log("This is not a mobile device.");
+}
+function backnBtn(){
+    window.location.href="chat-dashboard.html";
+}
+function loadChat(selectedUser,user_role,userImage) {
+     if(isMobile()){
+        console.log("we are on mobile")
+        const chatContainer=document.getElementById("chatContainer");
+        const userContainer=document.getElementById("userContainer");
+        const backnBtn=document.getElementById("back-button");
+        backnBtn.style.display='block';
+        chatContainer.style.display='block';
+        userContainer.style.display='none';    
+     }
     activeUser = selectedUser;
+    activeImage=userImage;
+    activeRole=user_role;
     const chatContainer = document.querySelector('.chats');
     chatContainer.innerHTML = '';
 
     const chatHeader = document.querySelector('.left-container .user h2');
     chatHeader.textContent = selectedUser;
-
+     
+    const userRole=document.querySelector('.left-container .user p');
+    userRole.textContent=user_role;
+    const userImg=document.querySelector('.left-container .user img');
+    userImg.src=userImage;
+    
     messages = JSON.parse(localStorage.getItem('messages')) || [];
 
     let userMessages;
@@ -159,7 +184,7 @@ function sendMessage() {
 
     localStorage.setItem('messageUpdate', Date.now()); 
 
-    loadChat(activeUser);
+    loadChat(activeUser,activeRole,activeImage);
 
     messageInput.value = '';
 }
@@ -191,3 +216,4 @@ function signOut() {
     localStorage.removeItem('currentUser');
     window.location.href = 'login.html';
 }
+

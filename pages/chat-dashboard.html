@@ -8,10 +8,13 @@
     <link rel="stylesheet" href="../styles/pages/chat-dashbaord.css">
     <title>Chat Dashboard</title>
 </head>
-
+<style>
+   
+</style>
 <body>
     <main class="main-conatiner">
-        <div class="right-container">
+        <div class="right-container" id="userContainer">
+          
             <form action=""
                 style="align-items: start;justify-content: start;display: flex;flex-direction: column;width: 100%;margin-top: 20px;">
                 <input type="text" id="search-input" name="search-input" placeholder="search users/groups"
@@ -26,15 +29,17 @@
 
             </div>
         </div>
-        <div class="left-container">
+        
+        <div class="left-container" id="chatContainer">
+            <button class="primarybtn" id="back-button" style="display: none;align-self: start;justify-self: flex-start;" onclick="backnBtn()">Back</button>
             <div style="display: flex;flex-direction: row;width:100%;">
-                <div style="width: 50%; display: flex;flex-direction: column;justify-content:space-between;">
+                <div class="active-user">
                     <div class="user" style="width: 100%;margin-bottom:1px ;" >
                         <div id="pro-img" style="width: 10%;">
                             <img src="../assest/images/profile-pic.jpg" id="profile-pic" alt="profile-pic" height="80px"
                                 width="80px">
                         </div>
-                        <div id="details" style="margin-bottom:-2px; margin-left: 100px;">
+                        <div id="" class="user-name">
                             <h2 id="name">Rapudi Hlakudi</h2>
                             <p style="color: #DB4A2B;">Software Developer</p>
                         </div>
@@ -46,8 +51,8 @@
                     </div>
                 </div>
 
-                <div style="width: 50%;justify-content: end;align-items: end;display: flex;flex-direction: row;">
-                    <button class="primarybtn" style="align-self: flex-end;justify-self: end;margin-bottom:100px;" onclick=" signOut()">Sign out</button>
+                <div class="sig-out-btn">
+                    <button class="primarybtn"  id="signout-btn" style="align-self: flex-end;justify-self: end;margin-bottom:100px;" onclick=" signOut()">Sign out</button>
                 </div>
             </div>
 
