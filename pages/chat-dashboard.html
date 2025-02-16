@@ -26,23 +26,32 @@
 
             </div>
         </div>
-
         <div class="left-container">
-            <div class="user">
-                <div id="pro-img" style="width: 10%;">
-                    <img src="../assest/images/profile-pic.jpg" id="profile-pic" alt="profile-pic" height="80px"
-                        width="80px">
+            <div style="display: flex;flex-direction: row;width:100%;">
+                <div style="width: 50%; display: flex;flex-direction: column;justify-content:space-between;">
+                    <div class="user" style="width: 100%;margin-bottom:1px ;" >
+                        <div id="pro-img" style="width: 10%;">
+                            <img src="../assest/images/profile-pic.jpg" id="profile-pic" alt="profile-pic" height="80px"
+                                width="80px">
+                        </div>
+                        <div id="details" style="margin-bottom:-2px; margin-left: 100px;">
+                            <h2 id="name">Rapudi Hlakudi</h2>
+                            <p style="color: #DB4A2B;">Software Developer</p>
+                        </div>
+
+                    </div>
+                    <div
+                        style="width: 100%;justify-content: start;align-items: start;display: flex;flex-direction: row;margin-bottom: 35px;">
+                        <hr style="border-top: 2px solid white; width: 100%;">
+                    </div>
                 </div>
-                <div id="details" style="margin-bottom:-2px; ">
-                    <h2 id="name">Rapudi Hlakudi</h2>
-                    <p style="color: #DB4A2B;">Software Developer</p>
+
+                <div style="width: 50%;justify-content: end;align-items: end;display: flex;flex-direction: row;">
+                    <button class="primarybtn" style="align-self: flex-end;justify-self: end;margin-bottom:100px;" onclick=" signOut()">Sign out</button>
                 </div>
-             
             </div>
-            <div style="width: 40%;justify-content: start;align-items: start;display: flex;flex-direction: row;">
-                <hr style="border-top: 2px solid white; width: 100%;">
-            </div>
-        
+
+
             <div class="chats">
                 <div class="sent">
                     <p id="sent-message">
@@ -57,13 +66,15 @@
                     <p style="font-weight: bolder;color: #DB4A2B;margin-bottom: -7px;justify-self: end;">10:00</p>
                 </div>
             </div>
+
             <div class="chatbox">
                 <textarea id="chat-input" placeholder="Type here..."></textarea>
-                <button onclick="sendMessage()" style="background: #DB4A2B; color: white; padding: 10px;">Send</button>
+                <button onclick="sendMessage()"
+                    style="background: #DB4A2B; color: white; padding: 10px; border-radius: 15px; border-width: 0px;">Send</button>
             </div>
         </div>
     </main>
     <script src="../js/chat-dashboard.js"></script>
-</body> 
+</body>
 
 </html>

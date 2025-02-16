@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     let users = JSON.parse(localStorage.getItem('users')) || [];
+
+    
     function hashPassword(password) {
       return CryptoJS.SHA256(password).toString();
     }
