@@ -34,7 +34,7 @@
             <button class="primarybtn" id="back-button" style="display: none;align-self: start;justify-self: flex-start;" onclick="backnBtn()">Back</button>
             <div style="display: flex;flex-direction: row;width:100%;">
                 <div class="active-user">
-                    <div class="user" style="width: 100%;margin-bottom:1px ;" >
+                    <div class="user" style="width: 100%;margin-bottom:1px ;" id="activeUser1" >
                         <div id="pro-img" style="width: 10%;">
                             <img src="../assest/images/profile-pic.jpg" id="profile-pic" alt="profile-pic" height="80px"
                                 width="80px">
@@ -77,9 +77,22 @@
                 <button onclick="sendMessage()"
                     style="background: #DB4A2B; color: white; padding: 10px; border-radius: 15px; border-width: 0px;">Send</button>
             </div>
+            <div id="Modal">
+                <div id="user-container-modal" style="width:30%; display: none;">
+                  
+                    
+                </div>
+                           
+           </div>
         </div>
+
+
+        <!--User Modal-->
+  
+         
     </main>
     <script src="../js/chat-dashboard.js"></script>
+ 
 </body>
 
 </html>
