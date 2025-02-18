@@ -9,7 +9,7 @@ form {
     display: flex;
     flex-direction: column;
 }
-form input[type=text],input[type=password]{
+form input[type=text],input[type=password],input[type=email]{
     width: 60%;
     height: 40px;
     border: none;
