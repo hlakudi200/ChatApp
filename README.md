@@ -12,13 +12,13 @@ Bontle is a chat application designed to create a community from the software in
 
 ### Components and functional requirements 
 ## 1.Authentication and authorisation 
-   -users can  sign up  
-   -users can sing into the web application
-   -users can sign out of the application 
+   - users can  sign up  
+   - users can sing into the web application
+   - users can sign out of the application 
 
 ## 2.Chat System 
-   -users can send and receive direct messages
-   -users can send and receive messages within a group 
+   - users can send and receive direct messages
+   - users can send and receive messages within a group 
 
 ### Design 
  **Wireframes:** https://www.figma.com/design/1x3IidCPrUfR6y6lxCrmqG/Bontle?node-id=0-1&t=RgCVQU5nDxuEbE73-1
@@ -26,9 +26,9 @@ Bontle is a chat application designed to create a community from the software in
 
 ### Running the application 
  # On local 
- -Install Live server extension on visual studio code 
- -Open the root folder of the application through visual studio code 
- -Run the application through the local port,using the live server by clicking on the port icon on  the bottom right of visual studio.
+ - Install Live server extension on visual studio code 
+ - Open the root folder of the application through visual studio code 
+ - Run the application through the local port,using the live server by clicking on the port icon on  the bottom right of visual studio.
  
 # Deployed 
 Follow the link : https://bontle.netlify.app/pages/asignup
