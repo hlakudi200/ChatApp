@@ -1,4 +1,4 @@
-What is Bontle ? 
+What is Bontle ?
 Bontle is a chat application designed to create a community from the software industry,caters from different roles within the industry and enables them to chat among themselves within a group chat and privately message any member of the chat platform.
 
 
