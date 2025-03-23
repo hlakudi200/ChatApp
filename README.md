@@ -31,7 +31,7 @@ Bontle is a chat application designed to create a community from the software in
  - Run the application through the local port,using the live server by clicking on the port icon on  the bottom right of visual studio.
  
 # Deployed 
-Follow the link : https://bontle.netlify.app/pages/asignup
+Follow the link : https://bontle.netlify.app
 
 
  
